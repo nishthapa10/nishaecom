@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
-
+import Header from './components/Header/index';
+import Body from './components/Body/index';
+import Filters from './components/Filters/index';
+import Cards from './components/Cards/index';
 function App() {
+  let filters = [
+    { text: 'size', value: 'size' },
+    { text: 'color', value: 'color' },
+    { text: 'fit', value: 'fit' },
+    { text: 'price', value: 'price' },
+    { text: 'sort', value: 'sort' },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <Body />
+      <Filters filters={filters} />
+      <Cards />
     </div>
   );
 }
