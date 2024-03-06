@@ -7,5 +7,8 @@ const CardWrapper = styled.div`
     row-gap: 15px;
     border: solid 1px;
   }
+  .test {
+    color: red;
+  }
 `;
 export { CardWrapper };
